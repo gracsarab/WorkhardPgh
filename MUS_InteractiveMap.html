@@ -22,13 +22,12 @@
 		slider.goto( number ); // jumps to the NUMBER slide
       
       //reposition page so slider is in top of view area
-      var scrollToSlider = document.getElementByClass('board-map-ui-element-2');
+      var scrollToSlider = document.getElementById('home-slider');
       scrollToSlider.scrollIntoView();
 
 		//make detroit bigger (this doesn't get undone)
 		//document.getElementById('detroit').setAttribute("r", "10");
 	}
-		
 	// Updates dot sizes based on current and previous slide information	
 	function updateDotSizes(currentSlide, previousSlide){
 		// resets previous dot
