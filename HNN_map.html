@@ -13,13 +13,13 @@
 <script>
 	let currentSlide = 'Pittsburgh';
 	let previousSlide;
+	var slider = new W_SLIDER_CONTROLLER( '#home-slider' );
 	// Controlling the slider via the map
 	function select(id, number){
-		var scrollToSlider = document.getElementById('home-slider');
-		var slider = new W_SLIDER_CONTROLLER( scrollToSlider );
 		slider.goto( number ); // jumps to the NUMBER slide
       
       //reposition page so slider is in top of view area
+	  var scrollToSlider = document.getElementById('home-slider');
       scrollToSlider.scrollIntoView();
 	}
 
