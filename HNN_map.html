@@ -15,11 +15,11 @@
 	let previousSlide;
 	// Controlling the slider via the map
 	function select(id, number){
-		var slider = new W_SLIDER_CONTROLLER( document.getElementById('home-slider') );
+		var scrollToSlider = document.getElementById('home-slider');
+		var slider = new W_SLIDER_CONTROLLER( scrollToSlider );
 		slider.goto( number ); // jumps to the NUMBER slide
       
       //reposition page so slider is in top of view area
-      var scrollToSlider = document.getElementById('home-slider');
       scrollToSlider.scrollIntoView();
 	}
 
