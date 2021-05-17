@@ -1,16 +1,14 @@
 <style>	
-    #hearts:hover {
+    .heart:hover {
         fill: #facb66; 
     }
 	
-    #hearts {
+    .heart {
         transition: .6s fill;
         fill:#f39203;
         fill-opacity:1;
         stroke-width:0.601657;
     }
-	
-	
 </style>
 
 <script>
@@ -24,8 +22,8 @@
       //reposition page so slider is in top of view area
       var scrollToSlider = document.getElementById('home-slider');
       scrollToSlider.scrollIntoView();
-
 	}
+
 	// Updates heart sizes based on current and previous slide information	
 	function updateHeartSizes(currentSlide, previousSlide){
 		// resets previous dot
