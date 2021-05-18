@@ -1,27 +1,16 @@
 <script>
-		// Event listener
-		var Webflow = Webflow || [];
-	Webflow.push(function () {
-	  // listen for all sliders on the page - .w-slider is Webflow's default class for slider components
-	  $(document).on('slider-event', '.w-slider', function(e, data) {
-		// do your thang
-		  previousSlide = currentSlide;
-		  currentSlide = translateSlideInfo(data.index);
-		  updateHeartSizesSizes(currentSlide, previousSlide);
-		});
-
-	});
-	
 	let currentSlide = 'Pittsburgh';
 	let previousSlide;
 	// Controlling the slider via the map
 	function select(name, number){
-		var slider = new W_SLIDER_CONTROLLER( '#network-slider' );
+		//var slider = new W_SLIDER_CONTROLLER( '#network-slider' );
+		var slider = document.getElementById('network-slider');
 		slider.goto( number ); // jumps to the NUMBER slide
       
       //reposition page so slider is in top of view area
-	  var scrollToSlider = document.getElementById('network-slider');
-      scrollToSlider.scrollIntoView();
+	  ///var scrollToSlider = document.getElementById('network-slider');
+      //scrollToSlider.scrollIntoView();
+	  slider.scrollIntoView();
 	}
 
 	// Updates heart sizes based on current and previous slide information	
@@ -118,6 +107,19 @@
 		}
 		return city;
 	}
+
+	// Event listener
+	var Webflow = Webflow || [];
+	Webflow.push(function () {
+	  // listen for all sliders on the page - .w-slider is Webflow's default class for slider components
+	  $(document).on('slider-event', '.w-slider', function(e, data) {
+		// do your thang
+		  previousSlide = currentSlide;
+		  currentSlide = translateSlideInfo(data.index);
+		  updateHeartSizesSizes(currentSlide, previousSlide);
+		});
+
+	});
 
 </script>
 
