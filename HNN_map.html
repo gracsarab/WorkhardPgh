@@ -1,17 +1,4 @@
-<style>	
-    .heart:hover {
-        fill: #facb66; 
-    }
-	
-    .heart {
-        transition: .6s fill;
-        fill:#f39203;
-        fill-opacity:1;
-        stroke-width:0.601657;
-    }
-	
-	
-</style>
+
 <script>
 	/**
 	* Extends Webflow Slider with public methods to swich between slides
@@ -148,13 +135,13 @@
 	}
 
 	// Updates heart sizes based on current and previous slide information	
-	// function updateHeartSizes(currentSlide, previousSlide){
-	// 	// resets previous dot
-	// 	document.getElementById(previousSlide).setAttribute("r", "4");
-	// 	// modifies current dot in
-	// 	document.getElementById(currentSlide).setAttribute("r", "12"); // change color to light orange
+	function updateHeartSizes(currentSlide, previousSlide){
+		// resets previous dot
+		document.getElementById(previousSlide).setAttribute("r", "4");
+		// modifies current dot in
+		document.getElementById(currentSlide).setAttribute("r", "12"); // change color to light orange
 
-	// }
+	}
 	
 	// translates ids from the slide event to city names which are used as ids for the hearts in the map
 	function translateSlideInfo(name){
@@ -1298,7 +1285,7 @@
 		<path id="XMLID_42_" class="st17" d="M61.76,266.33l-0.8-0.8c-2.97-2.63-4.91-4.4-4.91-6.57c0-1.77,1.37-3.14,3.14-3.14
 			c0.97,0,1.94,0.46,2.57,1.2c0.63-0.74,1.6-1.2,2.57-1.2c1.77,0,3.14,1.37,3.14,3.14c0,2.17-1.94,3.94-4.91,6.57L61.76,266.33z"/>
 	</g>
-	<g id="XMLID_39_" name="MissionViejo" onclick="select('Morristown',20)">
+	<g id="XMLID_39_" name="Glendale" onclick="select('Glendale',15)">
 		<path id="XMLID_40_" class="st17" d="M74.42,287.9l-0.8-0.8c-2.97-2.63-4.91-4.4-4.91-6.57c0-1.77,1.37-3.14,3.14-3.14
 			c0.97,0,1.94,0.46,2.57,1.2c0.63-0.74,1.6-1.2,2.57-1.2c1.77,0,3.14,1.37,3.14,3.14c0,2.17-1.94,3.94-4.91,6.57L74.42,287.9z"/>
 	</g>
