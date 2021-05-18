@@ -14,7 +14,7 @@
 	let currentSlide = 'Pittsburgh';
 	let previousSlide;
 	// Controlling the slider via the map
-	function select(id, number){
+	function select(name, number){
 		var slider = new W_SLIDER_CONTROLLER( '#network-slider' );
 		slider.goto( number ); // jumps to the NUMBER slide
       
@@ -33,9 +33,9 @@
 	}
 	
 	// translates ids from the slide event to city names which are used as ids for the hearts in the map
-	function translateSlideInfo(id){
+	function translateSlideInfo(name){
 		let city;
-		switch ( id ) {
+		switch ( name ) {
 		    case 0:
 			city = 'Pittsburgh';
 		    break;
