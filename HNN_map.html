@@ -1,16 +1,17 @@
-<style>	
-    .heart:hover {
-        fill: #facb66; 
-    }
-	
-    .heart {
-        transition: .6s fill;
-        fill-opacity:1;
-        stroke-width:0.601657;
-    }
-</style>
-
 <script>
+		// Event listener
+		var Webflow = Webflow || [];
+	Webflow.push(function () {
+	  // listen for all sliders on the page - .w-slider is Webflow's default class for slider components
+	  $(document).on('slider-event', '.w-slider', function(e, data) {
+		// do your thang
+		  previousSlide = currentSlide;
+		  currentSlide = translateSlideInfo(data.index);
+		  updateHeartSizesSizes(currentSlide, previousSlide);
+		});
+
+	});
+	
 	let currentSlide = 'Pittsburgh';
 	let previousSlide;
 	// Controlling the slider via the map
@@ -24,13 +25,13 @@
 	}
 
 	// Updates heart sizes based on current and previous slide information	
-	function updateHeartSizes(currentSlide, previousSlide){
-		// resets previous dot
-		document.getElementById(previousSlide).setAttribute("r", "4");
-		// modifies current dot in
-		document.getElementById(currentSlide).setAttribute("r", "12"); // change color to light orange
+	// function updateHeartSizes(currentSlide, previousSlide){
+	// 	// resets previous dot
+	// 	document.getElementById(previousSlide).setAttribute("r", "4");
+	// 	// modifies current dot in
+	// 	document.getElementById(currentSlide).setAttribute("r", "12"); // change color to light orange
 
-	}
+	// }
 	
 	// translates ids from the slide event to city names which are used as ids for the hearts in the map
 	function translateSlideInfo(name){
@@ -117,18 +118,7 @@
 		}
 		return city;
 	}
-	// Event listener
-	var Webflow = Webflow || [];
-	Webflow.push(function () {
-	  // listen for all sliders on the page - .w-slider is Webflow's default class for slider components
-	  $(document).on('slider-event', '.w-slider', function(e, data) {
-		// do your thang
-		  previousSlide = currentSlide;
-		  currentSlide = translateSlideInfo(data.index);
-		  updateHeartSizesSizes(currentSlide, previousSlide);
-		});
 
-	});
 </script>
 
 <!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) -->
