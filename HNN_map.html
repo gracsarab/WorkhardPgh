@@ -144,9 +144,14 @@
 	}
 
 	//change cursor when hovering over hearts
-	function changeCursor(){
-		document.body.style.cursor = "pointer";
-		this.onmouseout = document.body.style.cursor = "auto";
+	function changeCursor(action){
+		if (action="in"){
+			document.body.style.cursor = "pointer";
+		}
+		else{
+			document.body.style.cursor= "auto";
+		}
+		
 	}
 	
 	// translates ids from the slide event to city names which are used as ids for the hearts in the map
@@ -1303,7 +1308,7 @@
 		<path id="XMLID_36_" class="st18" d="M582.54,147.63l-0.8-0.8c-2.97-2.63-4.91-4.4-4.91-6.57c0-1.77,1.37-3.14,3.14-3.14
 			c0.97,0,1.94,0.46,2.57,1.2c0.63-0.74,1.6-1.2,2.57-1.2c1.77,0,3.14,1.37,3.14,3.14c0,2.17-1.94,3.94-4.91,6.57L582.54,147.63z"/>
 	</g>
-	<g id="XMLID_33_" name="Washington" onclick="select('Washington',7)" onmouseover="changeCursor()">
+	<g id="XMLID_33_" name="Washington" onclick="select('Washington',7)" onmouseover="changeCursor('in')" onmouseout="changeCursor('out')">
 		<path id="XMLID_34_" class="st18" d="M557.65,189.76l-0.8-0.8c-2.97-2.63-4.91-4.4-4.91-6.57c0-1.77,1.37-3.14,3.14-3.14
 			c0.97,0,1.94,0.46,2.57,1.2c0.63-0.74,1.6-1.2,2.57-1.2c1.77,0,3.14,1.37,3.14,3.14c0,2.17-1.94,3.94-4.91,6.57L557.65,189.76z"/>
 	</g>
