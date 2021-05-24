@@ -1,7 +1,6 @@
 <style>
 	.heart{
 		transition: 0.5s;
-		transform-origin: 50% 50%;
   	}
 </style>
 <script>
@@ -137,7 +136,9 @@
       //reposition page so slider is in top of view area
 	  var scrollToSlider = document.getElementById('network-slider');
       scrollToSlider.scrollIntoView();
-	  document.getElementById(id).setAttribute("transform", "scale(1.5)");
+	  coord = document.getElementById(id).getBBox();
+	  console.log(coord);
+	  //document.getElementById(id).setAttribute("transform", "scale(1.5)");
 	}
 
 	//"matrix(1.5,0,0,1.5,0,0)"
