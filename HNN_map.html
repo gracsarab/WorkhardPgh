@@ -1,4 +1,10 @@
-
+<style>
+	.heart:active {
+  		transform: scale(2.0);
+  		-ms-transform: scale(2.0);
+  		-webkit-transform: scale(2.0);
+	}
+</style>
 <script>
 	/**
 	* Extends Webflow Slider with public methods to swich between slides
@@ -151,6 +157,7 @@
 	var hearts = document.getElementById("hearts").children;
 	for (i = 0; i < hearts.length; i++) {
 		hearts[i].style.cursor = "pointer";
+		hearts[i].className = "heart";
 	}
 
 	// translates ids from the slide event to city names which are used as ids for the hearts in the map
@@ -1274,7 +1281,7 @@
 </g>
 
 <!--HEARTS-->
-<g id="hearts" class="heart">
+<g id="hearts" >
 	<g id="XMLID_49_" name="JerseyCity" onclick="select('JerseyCity',17)">
 		<path id="XMLID_50_" class="st17 st23" d="M586.37,155.29l-0.8-0.8c-2.97-2.63-4.91-4.4-4.91-6.57c0-1.77,1.37-3.14,3.14-3.14
 			c0.97,0,1.94,0.46,2.57,1.2c0.63-0.74,1.6-1.2,2.57-1.2c1.77,0,3.14,1.37,3.14,3.14c0,2.17-1.94,3.94-4.91,6.57L586.37,155.29z"/>
