@@ -146,6 +146,7 @@
 	//change cursor when hovering over hearts
 	function changeCursor(){
 		document.body.style.cursor = "pointer";
+		this.onmouseout = document.body.style.cursor = "auto";
 	}
 	
 	// translates ids from the slide event to city names which are used as ids for the hearts in the map
