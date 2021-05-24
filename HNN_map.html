@@ -1,13 +1,10 @@
 <style>
 	.heart{
 		transition: 0.5s;
-  		-webkit-transition: 0.5s;
   	}
 	
 	.heart:active {
   		transform: scale(2.0);
-  		-ms-transform: scale(2.0);
-  		-webkit-transform: scale(2.0);
 	}
 </style>
 <script>
@@ -137,7 +134,6 @@
 
 	// Controlling the slider via the map
 	function select(id, number){
-		document.getElementById(id).className="heart";
 
 		var slider = new W_SLIDER_CONTROLLER( '#network-slider' );
 		slider.goto( number ); // jumps to the NUMBER slide
