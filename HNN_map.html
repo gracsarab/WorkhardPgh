@@ -145,13 +145,9 @@
 
 	//change cursor when hovering over hearts
 	var hearts = document.getElementsByClassName("heart").children;
-	// function pointCursor(){
-	// 	hearts.style.cursor = "pointer";
-	// }
-	hearts.addEventListener('load', (event) => {
-            console.log('hearts loaded!');
-			hearts.style.cursor = "pointer";
-        });
+	for (i = 0; i < hearts.length; i++) {
+		hearts[i].style.cursor = "pointer";
+	}
 
 	// translates ids from the slide event to city names which are used as ids for the hearts in the map
 	function translateSlideInfo(name){
