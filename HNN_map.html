@@ -138,13 +138,13 @@
 	// Controlling the slider via the map
 	function select(id, number){
 		document.getElementById(id).className="heart";
-		
+
 		var slider = new W_SLIDER_CONTROLLER( '#network-slider' );
 		slider.goto( number ); // jumps to the NUMBER slide
       
       //reposition page so slider is in top of view area
 	  var scrollToSlider = document.getElementById('network-slider');
-      scrollToSlider.scrollIntoView();c
+      scrollToSlider.scrollIntoView();
 	}
 
 	// Updates heart sizes based on current and previous slide information	
