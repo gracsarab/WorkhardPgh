@@ -138,12 +138,11 @@
 	function updateHeartSizes(currentSlide, previousSlide){
 		// resets previous dot
 		var prev = document.getElementsByName(previousSlide);
-		prev[0].style.height="10px";
+		prev[0].setAttribute("height", "10px");
 
 		// modifies current dot in
 		var curr = document.getElementsByName(currentSlide);
-		curr.style.height="50px"; 
-
+		curr[0].setAttribute("height", "50px");
 	}
 
 	//change cursor when hovering over hearts
