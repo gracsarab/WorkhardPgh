@@ -125,7 +125,7 @@
 	let previousSlide;
 
 	// Controlling the slider via the map
-	function select(name, number){
+	function select(id, number){
 		var slider = new W_SLIDER_CONTROLLER( '#network-slider' );
 		slider.goto( number ); // jumps to the NUMBER slide
       
@@ -133,22 +133,19 @@
 	  var scrollToSlider = document.getElementById('network-slider');
       scrollToSlider.scrollIntoView();
 	  
+	  document.getElementById(id).setAttribute("height", "200%");
 	}
 
 	// Updates heart sizes based on current and previous slide information	
-	function updateHeartSizes(currentSlide, previousSlide){
-		// resets previous dot
-		var prev = document.getElementsByName(previousSlide);
-		prev[0].setAttribute("height", "100%");
+	// function updateHeartSizes(currentSlide, previousSlide){
+	// 	// resets previous dot
+	// 	var prev = document.getElementsByName(previousSlide);
+	// 	prev[0].setAttribute("height", "100%");
 
-		// modifies current dot in
-		var curr = document.getElementsByName(currentSlide);
-		curr[0].setAttribute("height", "200%");
-	}
-
-	function heartBig(id){
-		document.getElementById(id).setAttribute("height", "200%");
-	}
+	// 	// modifies current dot in
+	// 	var curr = document.getElementsByName(currentSlide);
+	// 	curr[0].setAttribute("height", "200%");
+	// }
 
 	//change cursor when hovering over hearts
 	var hearts = document.getElementById("hearts").children;
