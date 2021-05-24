@@ -148,7 +148,10 @@
 		document.getElementsByClassName("heart").children.style.cursor = "pointer";
 	}
 
-	
+	window.onload = (event) => {
+    console.log('The page has fully loaded');
+	pointCursor();
+};
 	// translates ids from the slide event to city names which are used as ids for the hearts in the map
 	function translateSlideInfo(name){
 		let city;
