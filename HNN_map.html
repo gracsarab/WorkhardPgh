@@ -136,9 +136,10 @@
       //reposition page so slider is in top of view area
 	  var scrollToSlider = document.getElementById('network-slider');
       scrollToSlider.scrollIntoView();
-	  coord = document.getElementById(id).getBBox();
-	  console.log(coord);
-	  //document.getElementById(id).setAttribute("transform", "scale(1.5)");
+	  var currentCity = document.getElementById(id)
+	  var coords = currentCity.getBBox();
+	//   console.log(coords);
+	//   currentCity.setAttribute("transform-origin", "scale(1.5)");
 	}
 
 	//"matrix(1.5,0,0,1.5,0,0)"
@@ -158,6 +159,7 @@
 	var hearts = document.getElementById("hearts").children;
 	for (i = 0; i < hearts.length; i++) {
 		hearts[i].style.cursor = "pointer";
+		console.log(hearts[i].getBBox());
 	}
 
 	// translates ids from the slide event to city names which are used as ids for the hearts in the map
