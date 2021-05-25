@@ -126,7 +126,7 @@
 	};  
 
 	let currentSlide = 'XMLID_6_';
-	let coordinates = document.getElementById(currentSlide).getBBox();
+	let coordinates;
 	let previousSlide;
 	let preCoordinates; 
 
@@ -143,6 +143,7 @@
 		scrollToSlider.scrollIntoView();
 
 		var currentCity = document.getElementById(currentSlide);
+		coordinates = currentCity.getBBox();
 		currentCity.setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(1.5) translate(-"+coordinates.x+", -"+coordinates.y+")");
 	
 		var previousCity = document.getElementById(previousSlide);
