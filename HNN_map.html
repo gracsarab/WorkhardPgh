@@ -125,9 +125,9 @@
 		}
 	};  
 
-	let currentSlide = 'XMLID_6_';
+	let currentSlide = '';
 	let coordinates = document.getElementById(currentSlide).getBBox();
-	let previousSlide;
+	let previousSlide = '';
 	let previousCoordinates = document.getElementById(previousSlide).getBBox();
 
 	// Controlling the slider via the map
@@ -155,18 +155,18 @@
 	// }
 
 	//Updates heart sizes based on current and previous slide information	
-	function updateHeartSizes(currentSlide, previousSlide){
-		// resets previous heart
-		var prev = document.getElementbyId(previousSlide);
-		var preCoordinates = prev.getBBox();
-		console.log(preCoordinates);
-		prev.setAttribute("transform", "translate("+preCoordinates.x+", "+preCoordinates.y+") scale(1) translate(-"+preCoordinates.x+", -"+preCoordinates.y+")");
-		// sets current heart
-		var curr = document.getElementbyId(currentSlide);
-		var curCoordinates = curr.getBBox();
-		console.log(curCoordinates);
-		curr.setAttribute("transform", "translate("+curCoordinates.x+", "+curCoordinates.y+") scale(1.5) translate(-"+curCoordinates.x+", -"+curCoordinates.y+")");
-	}
+	// function updateHeartSizes(currentSlide, previousSlide){
+	// 	// resets previous heart
+	// 	var prev = document.getElementbyId(previousSlide);
+	// 	var preCoordinates = prev.getBBox();
+	// 	console.log(preCoordinates);
+	// 	prev.setAttribute("transform", "translate("+preCoordinates.x+", "+preCoordinates.y+") scale(1) translate(-"+preCoordinates.x+", -"+preCoordinates.y+")");
+	// 	// sets current heart
+	// 	var curr = document.getElementbyId(currentSlide);
+	// 	var curCoordinates = curr.getBBox();
+	// 	console.log(curCoordinates);
+	// 	curr.setAttribute("transform", "translate("+curCoordinates.x+", "+curCoordinates.y+") scale(1.5) translate(-"+curCoordinates.x+", -"+curCoordinates.y+")");
+	// }
 
 	//change cursor when hovering over hearts
 	var hearts = document.getElementById("hearts").children;
