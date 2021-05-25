@@ -137,8 +137,7 @@
 		var scrollToSlider = document.getElementById('network-slider');
 		scrollToSlider.scrollIntoView();
 		var currentCity = document.getElementById(id)
-		currentCity.setAttribute('height', [coordinates.height * 2]);
-		//currentCity.setAttribute("transform", "scale(1.5)");
+		currentCity.setAttribute("transform", "scale(1.5)");
 	}
 
 	//"matrix(1.5,0,0,1.5,0,0)"
@@ -159,7 +158,8 @@
 	for (i = 0; i < hearts.length; i++) {
 		hearts[i].style.cursor = "pointer";
 		coordinates = hearts[i].getBBox();
-		//hearts[i].setAttribute('height', [coordinates.height * 2]);
+		hearts[i].setAttribute(cx, coordinates.x);
+		hearts[i].setAttribute(cy, coordinates.y);
 	}
 
 	// translates ids from the slide event to city names which are used as ids for the hearts in the map
