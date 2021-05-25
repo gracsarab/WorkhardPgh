@@ -159,7 +159,8 @@
 	var hearts = document.getElementById("hearts").children;
 	for (i = 0; i < hearts.length; i++) {
 		hearts[i].style.cursor = "pointer";
-		console.log(hearts[i].getBBox());
+		coordinates = hearts[i].getBBox();
+		hearts[i].setAttribute('transform-origin', coordinates);
 	}
 
 	// translates ids from the slide event to city names which are used as ids for the hearts in the map
