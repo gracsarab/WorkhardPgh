@@ -126,20 +126,26 @@
 	};  
 
 	let currentSlide = 'XMLID_6_';
+	let coordinates = document.getElementById(currentSlide).getBBox();
 	let previousSlide;
+	let previousCoordinates = document.getElementById(previousSlide).getBBox();
 
 	// Controlling the slider via the map
 	function select(id, number){
+		previousSlide = currentSlide;
+		currentSlide = id;
 		var slider = new W_SLIDER_CONTROLLER( '#network-slider' );
 		slider.goto( number ); // jumps to the NUMBER slide
       
 		//reposition page so slider is in top of view area
 		var scrollToSlider = document.getElementById('network-slider');
 		scrollToSlider.scrollIntoView();
-		//currentSlide = id;
-		// var currentCity = document.getElementById(id)
-		// var coordinates = currentCity.getBBox();
-		// currentCity.setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(1.5) translate(-"+coordinates.x+", -"+coordinates.y+")");
+
+		var currentCity = document.getElementById(currentSlide);
+		currentCity.setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(1.5) translate(-"+coordinates.x+", -"+coordinates.y+")");
+	
+		var previousCity = document.getElementById(previousSlide);
+		previousCity.setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(1) translate(-"+coordinates.x+", -"+coordinates.y+")");
 	}
 
 	// function growHeart(id){
@@ -262,8 +268,6 @@
 		// do your thang
 		  previousSlide = currentSlide;
 		  currentSlide = translateSlideInfo(data.index);
-		  console.log(previousSlide);
-		  console.log(currentSlide);
 		  updateHeartSizes(currentSlide, previousSlide);
 		});
 
