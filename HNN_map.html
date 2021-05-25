@@ -136,6 +136,7 @@
 		//reposition page so slider is in top of view area
 		var scrollToSlider = document.getElementById('network-slider');
 		scrollToSlider.scrollIntoView();
+		//currentSlide = id;
 		// var currentCity = document.getElementById(id)
 		// var coordinates = currentCity.getBBox();
 		// currentCity.setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(1.5) translate(-"+coordinates.x+", -"+coordinates.y+")");
@@ -261,6 +262,8 @@
 		// do your thang
 		  previousSlide = currentSlide;
 		  currentSlide = translateSlideInfo(data.index);
+		  console.log(previousSlide);
+		  console.log(currentSlide);
 		  updateHeartSizes(currentSlide, previousSlide);
 		});
 
