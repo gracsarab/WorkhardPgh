@@ -158,8 +158,8 @@
 	for (i = 0; i < hearts.length; i++) {
 		hearts[i].style.cursor = "pointer";
 		coordinates = hearts[i].getBBox();
-		hearts[i].setAttribute(cx, coordinates.x);
-		hearts[i].setAttribute(cy, coordinates.y);
+		hearts[i].setAttribute("cx", coordinates.x);
+		hearts[i].setAttribute("cy", coordinates.y);
 	}
 
 	// translates ids from the slide event to city names which are used as ids for the hearts in the map
