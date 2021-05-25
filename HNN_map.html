@@ -1,7 +1,7 @@
 <style>
-	.heart{
+	/* .heart{
 		transition: 0.5s;
-  	}
+  	} */
 </style>
 <script>
 	/**
@@ -139,7 +139,6 @@
 		var currentCity = document.getElementById(id)
 		var coordinates = currentCity.getBBox();
 		currentCity.setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(1.5) translate(-"+coordinates.x+", -"+coordinates.y+")");
-		
 	}
 
 	//"matrix(1.5,0,0,1.5,0,0)"
