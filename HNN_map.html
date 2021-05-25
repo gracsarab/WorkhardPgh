@@ -149,7 +149,7 @@
 		prev[0].setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(1) translate(-"+coordinates.x+", -"+coordinates.y+")");
 		// sets current heart
 		var curr = document.getElementsByName(currentSlide);
-		var coordinates = prev.getBBox();
+		var coordinates = curr.getBBox();
 		prev[0].setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(1.5) translate(-"+coordinates.x+", -"+coordinates.y+")");
 	}
 
