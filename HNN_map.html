@@ -151,25 +151,19 @@
 		previousCity.setAttribute("transform", "translate("+preCoordinates.x+", "+preCoordinates.y+") scale(1) translate(-"+preCoordinates.x+", -"+preCoordinates.y+")");
 	}
 
-	// function growHeart(id){
-	// 	var currentCity = document.getElementById(id)
-	// 	var coordinates = currentCity.getBBox();
-	// 	currentCity.setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(1.5) translate(-"+coordinates.x+", -"+coordinates.y+")");
-	// }
-
 	//Updates heart sizes based on current and previous slide information	
-	function updateHeartSizes(currentSlide, previousSlide){
-		// resets previous heart
-		var prev = document.getElementbyId(previousSlide);
-		var preCoordinates = prev.getBBox();
-		console.log(preCoordinates);
-		prev.setAttribute("transform", "translate("+preCoordinates.x+", "+preCoordinates.y+") scale(1) translate(-"+preCoordinates.x+", -"+preCoordinates.y+")");
-		// sets current heart
-		var curr = document.getElementbyId(currentSlide);
-		var curCoordinates = curr.getBBox();
-		console.log(curCoordinates);
-		curr.setAttribute("transform", "translate("+curCoordinates.x+", "+curCoordinates.y+") scale(1.5) translate(-"+curCoordinates.x+", -"+curCoordinates.y+")");
-	}
+	// function updateHeartSizes(currentSlide, previousSlide){
+	// 	// resets previous heart
+	// 	var prev = document.getElementbyId(previousSlide);
+	// 	var preCoordinates = prev.getBBox();
+	// 	console.log(preCoordinates);
+	// 	prev.setAttribute("transform", "translate("+preCoordinates.x+", "+preCoordinates.y+") scale(1) translate(-"+preCoordinates.x+", -"+preCoordinates.y+")");
+	// 	// sets current heart
+	// 	var curr = document.getElementbyId(currentSlide);
+	// 	var curCoordinates = curr.getBBox();
+	// 	console.log(curCoordinates);
+	// 	curr.setAttribute("transform", "translate("+curCoordinates.x+", "+curCoordinates.y+") scale(2) translate(-"+curCoordinates.x+", -"+curCoordinates.y+")");
+	// }
 
 	//change cursor when hovering over hearts
 	var hearts = document.getElementById("hearts").children;
@@ -178,90 +172,90 @@
 	}
 
 	//translates ids from the slide event to city names which are used as ids for the hearts in the map
-	function translateSlideInfo(id){
-		let city;
-		switch ( id ) {
-		    case 0:
-			city = 'XMLID_6_'; //Pittsburgh
-		    break;
-		    case 1:
-			city = 'XMLID_32_'; //Charlottesville
-		    break;
-		    case 2:
-			city = 'XMLID_30_'; //Cincinnatti
-		    break;
-		    case 3:
-			city = 'XMLID_44_'; //LosAngeles1
-		    break;
-		    case 4:
-			city = 'XMLID_4_'; //Miami
-		    break;
-		    case 5:
-			city = 'XMLID_38_'; //Missoula
-		    break;
-		    case 6:
-			city = 'XMLID_2_'; //Mobile
-		    break;
-		    case 7:
-			city = 'XMLID_34_'; //Washington
-		    break;
-		    case 8:
-			city = 'XMLID_36_'; //Westchester
-		    break;
-		    case 9:
-			city = 'XMLID_18_'; //Austin
-		    break;
-		    case 10:
-			city = 'XMLID_8_'; //Bismarck
-		    break;
-		    case 11:
-			city = 'XMLID_42_'; //Claremont
-		    break;
-		    case 12:
-			city = 'XMLID_28_'; //Columbus
-		    break;
-			case 13:
-			city = 'XMLID_16_' //Dallas
-			break;
-			case 14:
-			city = 'XMLID_24_' //Davenport
-			break;
-			case 15:
-			city = 'XMLID_40_' //Glendale
-			break;
-			case 16:
-			city= 'XMLID_20_' //Chicago
-			break;
-			case 17:
-			city = 'XMLID_50_' //Jersey City
-			break;
-			case 18:
-			city = 'XMLID_10_' //Knoxville
-			break;
-			case 19:
-			city = 'XMLID_46_' //Los Angeles 2
-			break;
-			case 20:
-			city = 'XMLID_14_' //Morristown
-			break;
-			case 21:
-			city = 'XMLID_12_' //Nashville
-			break;
-			case 22:
-			city = 'XMLID_26_' //New Haven
-			break;
-			case 23:
-			city = 'XMLID_48_' //Princeton
-			break;
-			case 24: 
-			city = 'XMLID_22_' //South Bend
-			break;
-			default:
-			city = 'XMLID_6_' //Pittsburgh
-			break;
-		}
-		return city;
-	}
+	// function translateSlideInfo(id){
+	// 	let city;
+	// 	switch ( id ) {
+	// 	    case 0:
+	// 		city = 'XMLID_6_'; //Pittsburgh
+	// 	    break;
+	// 	    case 1:
+	// 		city = 'XMLID_32_'; //Charlottesville
+	// 	    break;
+	// 	    case 2:
+	// 		city = 'XMLID_30_'; //Cincinnatti
+	// 	    break;
+	// 	    case 3:
+	// 		city = 'XMLID_44_'; //LosAngeles1
+	// 	    break;
+	// 	    case 4:
+	// 		city = 'XMLID_4_'; //Miami
+	// 	    break;
+	// 	    case 5:
+	// 		city = 'XMLID_38_'; //Missoula
+	// 	    break;
+	// 	    case 6:
+	// 		city = 'XMLID_2_'; //Mobile
+	// 	    break;
+	// 	    case 7:
+	// 		city = 'XMLID_34_'; //Washington
+	// 	    break;
+	// 	    case 8:
+	// 		city = 'XMLID_36_'; //Westchester
+	// 	    break;
+	// 	    case 9:
+	// 		city = 'XMLID_18_'; //Austin
+	// 	    break;
+	// 	    case 10:
+	// 		city = 'XMLID_8_'; //Bismarck
+	// 	    break;
+	// 	    case 11:
+	// 		city = 'XMLID_42_'; //Claremont
+	// 	    break;
+	// 	    case 12:
+	// 		city = 'XMLID_28_'; //Columbus
+	// 	    break;
+	// 		case 13:
+	// 		city = 'XMLID_16_' //Dallas
+	// 		break;
+	// 		case 14:
+	// 		city = 'XMLID_24_' //Davenport
+	// 		break;
+	// 		case 15:
+	// 		city = 'XMLID_40_' //Glendale
+	// 		break;
+	// 		case 16:
+	// 		city= 'XMLID_20_' //Chicago
+	// 		break;
+	// 		case 17:
+	// 		city = 'XMLID_50_' //Jersey City
+	// 		break;
+	// 		case 18:
+	// 		city = 'XMLID_10_' //Knoxville
+	// 		break;
+	// 		case 19:
+	// 		city = 'XMLID_46_' //Los Angeles 2
+	// 		break;
+	// 		case 20:
+	// 		city = 'XMLID_14_' //Morristown
+	// 		break;
+	// 		case 21:
+	// 		city = 'XMLID_12_' //Nashville
+	// 		break;
+	// 		case 22:
+	// 		city = 'XMLID_26_' //New Haven
+	// 		break;
+	// 		case 23:
+	// 		city = 'XMLID_48_' //Princeton
+	// 		break;
+	// 		case 24: 
+	// 		city = 'XMLID_22_' //South Bend
+	// 		break;
+	// 		default:
+	// 		city = 'XMLID_6_' //Pittsburgh
+	// 		break;
+	// 	}
+	// 	return city;
+	// }
 
 	// Event listener
 	var Webflow = Webflow || [];
@@ -271,7 +265,7 @@
 		// do your thang
 		  previousSlide = currentSlide;
 		  //currentSlide = translateSlideInfo(data.index);
-		  updateHeartSizes(currentSlide, previousSlide);
+		  //updateHeartSizes(currentSlide, previousSlide);
 		});
 
 	});
