@@ -133,13 +133,11 @@
 		var slider = new W_SLIDER_CONTROLLER( '#network-slider' );
 		slider.goto( number ); // jumps to the NUMBER slide
       
-      //reposition page so slider is in top of view area
-	  var scrollToSlider = document.getElementById('network-slider');
-      scrollToSlider.scrollIntoView();
-	  var currentCity = document.getElementById(id)
-	  var coords = currentCity.getBBox();
-	//   console.log(coords);
-	//   currentCity.setAttribute("transform-origin", "scale(1.5)");
+		//reposition page so slider is in top of view area
+		var scrollToSlider = document.getElementById('network-slider');
+		scrollToSlider.scrollIntoView();
+		var currentCity = document.getElementById(id)
+		currentCity.setAttribute("transform", "scale(1.5)");
 	}
 
 	//"matrix(1.5,0,0,1.5,0,0)"
