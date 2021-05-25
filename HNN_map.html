@@ -125,7 +125,7 @@
 		}
 	};  
 
-	let currentSlide = 'Pittsburgh';
+	let currentSlide = 'XMLID_6_';
 	let previousSlide;
 
 	// Controlling the slider via the map
@@ -141,18 +141,23 @@
 		// currentCity.setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(1.5) translate(-"+coordinates.x+", -"+coordinates.y+")");
 	}
 
+	// function growHeart(id){
+	// 	var currentCity = document.getElementById(id)
+	// 	var coordinates = currentCity.getBBox();
+	// 	currentCity.setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(1.5) translate(-"+coordinates.x+", -"+coordinates.y+")");
+	// }
+
 	//Updates heart sizes based on current and previous slide information	
 	function updateHeartSizes(currentSlide, previousSlide){
 		// resets previous heart
-		var prev = document.getElementsByName(previousSlide);
-		var coordinates = prev.getBBox();
-		prev[0].setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(1) translate(-"+coordinates.x+", -"+coordinates.y+")");
+		var prev = document.getElementbyId(previousSlide);
+		var preCoordinates = prev.getBBox();
+		prev.setAttribute("transform", "translate("+preCoordinates.x+", "+preCoordinates.y+") scale(1) translate(-"+preCoordinates.x+", -"+preCoordinates.y+")");
 		// sets current heart
-		var curr = document.getElementsByName(currentSlide);
-		var coordinates = curr.getBBox();
-		prev[0].setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(1.5) translate(-"+coordinates.x+", -"+coordinates.y+")");
+		var curr = document.getElementbyId(currentSlide);
+		var curCoordinates = curr.getBBox();
+		curr.setAttribute("transform", "translate("+curCoordinates.x+", "+curCoordinates.y+") scale(1.5) translate(-"+curCoordinates.x+", -"+curCoordinates.y+")");
 	}
-
 
 	//change cursor when hovering over hearts
 	var hearts = document.getElementById("hearts").children;
@@ -165,82 +170,82 @@
 		let city;
 		switch ( id ) {
 		    case 0:
-			city = 'Pittsburgh';
+			city = 'XMLID_6_'; //Pittsburgh
 		    break;
 		    case 1:
-			city = 'Charlottesville';
+			city = 'XMLID_32_'; //Charlottesville
 		    break;
 		    case 2:
-			city = 'Cincinnatti';
+			city = 'XMLID_30_'; //Cincinnatti
 		    break;
 		    case 3:
-			city = 'LosAngeles1';
+			city = 'XMLID_44_'; //LosAngeles1
 		    break;
 		    case 4:
-			city = 'Miami';
+			city = 'XMLID_4_'; //Miami
 		    break;
 		    case 5:
-			city = 'Missoula';
+			city = 'XMLID_38_'; //Missoula
 		    break;
 		    case 6:
-			city = 'Mobile';
+			city = 'XMLID_2_'; //Mobile
 		    break;
 		    case 7:
-			city = 'Washington';
+			city = 'XMLID_34_'; //Washington
 		    break;
 		    case 8:
-			city = 'Westchester';
+			city = 'XMLID_36_'; //Westchester
 		    break;
 		    case 9:
-			city = 'Austin';
+			city = 'XMLID_18_'; //Austin
 		    break;
 		    case 10:
-			city = 'Bismarck';
+			city = 'XMLID_8_'; //Bismarck
 		    break;
 		    case 11:
-			city = 'Claremont';
+			city = 'XMLID_42_'; //Claremont
 		    break;
 		    case 12:
-			city = 'Columbus';
+			city = 'XMLID_28_'; //Columbus
 		    break;
 			case 13:
-			city = 'Dallas'
+			city = 'XMLID_16_' //Dallas
 			break;
 			case 14:
-			city = 'Davenport'
+			city = 'XMLID_24_' //Davenport
 			break;
 			case 15:
-			city = 'Glendale'
+			city = 'XMLID_40_' //Glendale
 			break;
 			case 16:
-			city= 'Chicago'
+			city= 'XMLID_20_' //Chicago
 			break;
 			case 17:
-			city = 'JerseyCity'
+			city = 'XMLID_50_' //Jersey City
 			break;
 			case 18:
-			city = 'Knoxville'
+			city = 'XMLID_10_' //Knoxville
 			break;
 			case 19:
-			city = 'LosAngeles2'
+			city = 'XMLID_46_' //Los Angeles 2
 			break;
 			case 20:
-			city = 'Morristown'
+			city = 'XMLID_14_' //Morristown
 			break;
 			case 21:
-			city = 'Nashville'
+			city = 'XMLID_12_' //Nashville
 			break;
 			case 22:
-			city = 'NewHaven'
+			city = 'XMLID_26_' //New Haven
 			break;
 			case 23:
-			city = 'Princeton'
+			city = 'XMLID_48_' //Princeton
 			break;
 			case 24: 
-			city = 'SouthBend'
+			city = 'XMLID_22_' //South Bend
 			break;
 			default:
-			city = 'Pittsburgh'
+			city = 'XMLID_6_' //Pittsburgh
 			break;
 		}
 		return city;
