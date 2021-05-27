@@ -130,15 +130,12 @@
 		
 	let previousSlide;
 	let preCoordinates; 
-	//let coordinates = defaultCity.getBBox();
-	//start with the default heart bigger
-	//defaultCity.setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(1.75) translate(-"+coordinates.x+", -"+coordinates.y+")");	
 	
 	//make heart big
 	function heartBig(id){
 		var city = document.getElementById(id);
 		var coordinates = city.getBBox();
-		city.setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(1.75) translate(-"+coordinates.x+", -"+coordinates.y+")");	
+		city.setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(1.6) translate(-"+coordinates.x+", -"+coordinates.y+")");	
 	}
 	//reset heart size
 	function heartReset(id){
@@ -165,14 +162,6 @@
 		if (currentSlide!=previousSlide){
 			heartBig(currentSlide);
 			heartReset(previousSlide);
-
-			// var currentCity = document.getElementById(currentSlide);
-			// var coordinates = currentCity.getBBox();
-			// currentCity.setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(1.75) translate(-"+coordinates.x+", -"+coordinates.y+")");
-		
-			// var previousCity = document.getElementById(previousSlide);
-			// preCoordinates = previousCity.getBBox();
-			// previousCity.setAttribute("transform", "translate("+preCoordinates.x+", "+preCoordinates.y+") scale(1) translate(-"+preCoordinates.x+", -"+preCoordinates.y+")");
 		}
 	}
 
@@ -1230,10 +1219,6 @@
 		<path id="XMLID_44_" class="st17" d="M70.19,276.67l-0.8-0.8c-2.97-2.63-4.91-4.4-4.91-6.57c0-1.77,1.37-3.14,3.14-3.14
 			c0.97,0,1.94,0.46,2.57,1.2c0.63-0.74,1.6-1.2,2.57-1.2c1.77,0,3.14,1.37,3.14,3.14c0,2.17-1.94,3.94-4.91,6.57L70.19,276.67z"/>
 	</g>
-	<g id="XMLID_45_" name="LosAngeles2" onclick="select('XMLID_46_',19)">
-		<path id="XMLID_46_" class="st18" d="M61.53,278.1l-0.8-0.8c-2.97-2.63-4.91-4.4-4.91-6.57c0-1.77,1.37-3.14,3.14-3.14
-			c0.97,0,1.94,0.46,2.57,1.2c0.63-0.74,1.6-1.2,2.57-1.2c1.77,0,3.14,1.37,3.14,3.14c0,2.17-1.94,3.94-4.91,6.57L61.53,278.1z"/>
-	</g>
 	<g id="XMLID_41_" name="Claremont" onclick="select('XMLID_42_',11)">
 		<path id="XMLID_42_" class="st17" d="M61.76,266.33l-0.8-0.8c-2.97-2.63-4.91-4.4-4.91-6.57c0-1.77,1.37-3.14,3.14-3.14
 			c0.97,0,1.94,0.46,2.57,1.2c0.63-0.74,1.6-1.2,2.57-1.2c1.77,0,3.14,1.37,3.14,3.14c0,2.17-1.94,3.94-4.91,6.57L61.76,266.33z"/>
@@ -1241,6 +1226,10 @@
 	<g id="XMLID_39_" name="Glendale" onclick="select('XMLID_40_',15)">
 		<path id="XMLID_40_" class="st17" d="M74.42,287.9l-0.8-0.8c-2.97-2.63-4.91-4.4-4.91-6.57c0-1.77,1.37-3.14,3.14-3.14
 			c0.97,0,1.94,0.46,2.57,1.2c0.63-0.74,1.6-1.2,2.57-1.2c1.77,0,3.14,1.37,3.14,3.14c0,2.17-1.94,3.94-4.91,6.57L74.42,287.9z"/>
+	</g>
+	<g id="XMLID_45_" name="LosAngeles2" onclick="select('XMLID_46_',19)">
+		<path id="XMLID_46_" class="st18" d="M61.53,278.1l-0.8-0.8c-2.97-2.63-4.91-4.4-4.91-6.57c0-1.77,1.37-3.14,3.14-3.14
+			c0.97,0,1.94,0.46,2.57,1.2c0.63-0.74,1.6-1.2,2.57-1.2c1.77,0,3.14,1.37,3.14,3.14c0,2.17-1.94,3.94-4.91,6.57L61.53,278.1z"/>
 	</g>
 	<g id="XMLID_37_" name="Missoula" onclick="select('XMLID_38_',5)">
 		<path id="XMLID_38_" class="st18" d="M157.45,97.85l-0.8-0.8c-2.97-2.63-4.91-4.4-4.91-6.57c0-1.77,1.37-3.14,3.14-3.14
