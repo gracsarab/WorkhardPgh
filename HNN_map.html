@@ -145,8 +145,8 @@
 		scrollToSlider.scrollIntoView();
 
 		if (currentSlide!=previousSlide){
-			var currentCity = document.getElementById(currentSlide);
-			coordinates = currentCity.getBBox();
+			//var currentCity = document.getElementById(currentSlide);
+			//coordinates = currentCity.getBBox();
 			currentCity.setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(1.5) translate(-"+coordinates.x+", -"+coordinates.y+")");
 		
 			var previousCity = document.getElementById(previousSlide);
