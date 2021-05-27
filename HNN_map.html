@@ -127,9 +127,9 @@
 
 	let currentSlide = 'XMLID_6_';
 	let defaultCity = document.getElementById(currentSlide);
-	let defaultCoordinates = currentCity.getBBox();
+	let coordinates = defaultCity.getBBox();
 	//start with the default heart bigger
-	currentCity.setAttribute("transform", "translate("+defaultCoordinates.x+", "+defaultCoordinates.y+") scale(2) translate(-"+defaultCoordinates.x+", -"+defaultCoordinates.y+")");	
+	defaultCity.setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(2) translate(-"+coordinates.x+", -"+coordinates.y+")");	
 	let previousSlide;
 	let preCoordinates; 
 
@@ -138,7 +138,7 @@
 		previousSlide = currentSlide;
 		currentSlide = id;
 
-		var slider = new W_SLIDER_CONTROLLER( '#network-slider' );
+		var slider = new W_SLIDER_CONTROLLER( '#network-slider' )
 		slider.goto( number ); // jumps to the NUMBER slide
       
 		//reposition page so slider is in top of view area
