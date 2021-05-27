@@ -126,12 +126,28 @@
 	};  
 
 	let currentSlide = 'XMLID_6_';
-	let defaultCity = document.getElementById(currentSlide);
-	let coordinates = defaultCity.getBBox();
-	//start with the default heart bigger
-	defaultCity.setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(2) translate(-"+coordinates.x+", -"+coordinates.y+")");	
+	//let defaultCity = document.getElementById(currentSlide);
+		
 	let previousSlide;
 	let preCoordinates; 
+	//let coordinates = defaultCity.getBBox();
+	//start with the default heart bigger
+	//defaultCity.setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(1.75) translate(-"+coordinates.x+", -"+coordinates.y+")");	
+	
+	//make heart big
+	function heartBig(id){
+		var city = document.getElementById(id);
+		var coordinates = city.getBBox();
+		city.setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(1.75) translate(-"+coordinates.x+", -"+coordinates.y+")");	
+	}
+	//reset heart size
+	function heartReset(id){
+		var city = document.getElementById(id);
+		var coordinates = city.getBBox();
+		city.setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(1) translate(-"+coordinates.x+", -"+coordinates.y+")");	
+	}
+
+	heartBig(currentSlide);
 
 	// Controlling the slider via the map
 	function select(id, number){
@@ -147,13 +163,16 @@
 
 		//change heart size only if moving to a different slide
 		if (currentSlide!=previousSlide){
-			var currentCity = document.getElementById(currentSlide);
-			var coordinates = currentCity.getBBox();
-			currentCity.setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(2) translate(-"+coordinates.x+", -"+coordinates.y+")");
+			heartBig(currentSlide);
+			heartReset(previousSlide);
+
+			// var currentCity = document.getElementById(currentSlide);
+			// var coordinates = currentCity.getBBox();
+			// currentCity.setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(1.75) translate(-"+coordinates.x+", -"+coordinates.y+")");
 		
-			var previousCity = document.getElementById(previousSlide);
-			preCoordinates = previousCity.getBBox();
-			previousCity.setAttribute("transform", "translate("+preCoordinates.x+", "+preCoordinates.y+") scale(1) translate(-"+preCoordinates.x+", -"+preCoordinates.y+")");
+			// var previousCity = document.getElementById(previousSlide);
+			// preCoordinates = previousCity.getBBox();
+			// previousCity.setAttribute("transform", "translate("+preCoordinates.x+", "+preCoordinates.y+") scale(1) translate(-"+preCoordinates.x+", -"+preCoordinates.y+")");
 		}
 	}
 
