@@ -126,7 +126,7 @@
 	};  
 
 	let currentSlide = 'XMLID_6_';
-	var currentCity = document.getElementById(currentSlide);
+	let currentCity = document.getElementById(currentSlide);
 	let coordinates = currentCity.getBBox();
 	//start with the default heart bigger
 	currentCity.setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(2) translate(-"+coordinates.x+", -"+coordinates.y+")");	
@@ -147,6 +147,8 @@
 
 		//change heart size only if moving to a different slide
 		if (currentSlide!=previousSlide){
+			//var currentCity = document.getElementById(currentSlide);
+			//var coordinates = currentCity.getBBox();
 			currentCity.setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(2) translate(-"+coordinates.x+", -"+coordinates.y+")");
 		
 			var previousCity = document.getElementById(previousSlide);
