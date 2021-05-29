@@ -267,11 +267,12 @@
 	var Webflow = Webflow || [];
 	Webflow.push(function () {
 	  // listen for all sliders on the page - .w-slider is Webflow's default class for slider components
-	  $(document).on('slider-event', '.w-slider', function(e, data) {
-		// do your thang
-		  previousSlide = currentSlide;
-		  currentSlide = translateSlideInfo(data.index);
-		  updateHeartSizes(currentSlide, previousSlide);
+		$(document).on('slider-event', '.w-slider', function(e, data) {
+			// do your thang
+			console.log("theslider did something");
+			previousSlide = currentSlide;
+			currentSlide = translateSlideInfo(data.index);
+			updateHeartSizes(currentSlide, previousSlide);
 		});
 
 	});
