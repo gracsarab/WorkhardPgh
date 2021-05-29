@@ -128,6 +128,11 @@
 	let currentSlide = 'XMLID_6_';		
 	let previousSlide;
 	
+	// var arrows = document.getElementsByClassName("slider-arrow");
+	// for (i = 0; i < arrows.length; i++) {
+	// 	arrows[i].setAttribute(onclick="select(");
+	// }
+
 	//make heart big
 	function heartBig(id){
 		var city = document.getElementById(id);
@@ -142,6 +147,10 @@
 	}
 
 	heartBig(currentSlide);
+
+	var slider = new W_SLIDER_CONTROLLER( '#network-slider' )
+	var current = slider.current();
+	console.log(current);
 
 	// Controlling the slider via the map
 	function select(id, number){
@@ -263,7 +272,6 @@
 		  previousSlide = currentSlide;
 		  currentSlide = translateSlideInfo(data.index);
 		  updateHeartSizes(currentSlide, previousSlide);
-		  console.log(data.index);
 		});
 
 	});
