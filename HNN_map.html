@@ -271,7 +271,7 @@
 			// do your thang
 			console.log("theslider did something");
 			previousSlide = currentSlide;
-			currentSlide = translateSlideInfo(data.index);
+			currentSlide = translateSlideInfo(slider.current());
 			updateHeartSizes(currentSlide, previousSlide);
 		});
 
