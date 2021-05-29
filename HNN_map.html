@@ -164,7 +164,7 @@ Webflow.push(function () {
 	function heartBig(id){
 		var city = document.getElementById(id);
 		var coordinates = city.getBBox();
-		city.setAttribute("transform", "translate(-"+coordinates.x+", -"+coordinates.y+") scale(1.6) translate("+coordinates.x+", "+coordinates.y+")");	
+		city.setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(1.6) translate(-"+coordinates.x+", -"+coordinates.y+")");	
 	}
 	//reset heart size
 	function heartReset(id){
