@@ -159,18 +159,20 @@ Webflow.push(function () {
 
 	let currentSlide = 'XMLID_6_';		
 	let previousSlide;
+	var origCoordinatesLA1 = document.getElementById('XMLID_44_').getBBox();
+	var origCoordinatesLA2 = document.getElementById('XMLID_46_').getBBox();
 	
 	//make heart big
 	function heartBig(id){
 		var city = document.getElementById(id);
 		var coordinates = city.getBBox();
 		if (id == 'XMLID_44_'){
-			coordinates.x = coordinates.x+3;
+			coordinates = origCoordinatesLA1;
 		}
 		if (id == 'XMLID_46_'){
-			coordinates.x = coordinates.x-2;
+			coordinates.x = origCoordinatesLA2;
 		}
-		
+
 		city.setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(1.6) translate(-"+coordinates.x+", -"+coordinates.y+")");	
 	}
 	//reset heart size
@@ -178,10 +180,10 @@ Webflow.push(function () {
 		var city = document.getElementById(id);
 		var coordinates = city.getBBox();
 		if (id == 'XMLID_44_'){
-			coordinates.x = coordinates.x+3;
+			coordinates = origCoordinatesLA1;
 		}
 		if (id == 'XMLID_46_'){
-			coordinates.x = coordinates.x-2;
+			coordinates.x = origCoordinatesLA2;
 		}
 	
 		city.setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(1) translate(-"+coordinates.x+", -"+coordinates.y+")");	
@@ -306,6 +308,7 @@ Webflow.push(function () {
 		$(document).on('slider-event', '.w-slider', function(e, data) {
 			// do your thang
 			//console.log("theslider did something");
+			console.log(data.index)
 			previousSlide = currentSlide;
 			currentSlide = translateSlideInfo(data.index);
 			updateHeartSizes(currentSlide, previousSlide);
