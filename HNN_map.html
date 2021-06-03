@@ -170,6 +170,7 @@ Webflow.push(function () {
 		if (id == 'XMLID_46_'){
 			coordinates.x = coordinates.x-2;
 		}
+		
 		city.setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(1.6) translate(-"+coordinates.x+", -"+coordinates.y+")");	
 	}
 	//reset heart size
@@ -183,7 +184,7 @@ Webflow.push(function () {
 			coordinates.x = coordinates.x-2;
 		}
 	
-		city.setAttribute("transform", "translate("+3+coordinates.x+", "+coordinates.y+") scale(1) translate(-"+coordinates.x+", -"+coordinates.y+")");	
+		city.setAttribute("transform", "translate("+coordinates.x+", "+coordinates.y+") scale(1) translate(-"+coordinates.x+", -"+coordinates.y+")");	
 	}
 	
 	//start map off with the default city heart big on map
